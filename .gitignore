@@ -2,5 +2,5 @@
 /.project
 /.settings/
 /logs/
-/vendor/
 /.idea
+vendor
