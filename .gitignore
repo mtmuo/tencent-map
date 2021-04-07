@@ -1,6 +1,2 @@
-/.buildpath
-/.project
-/.settings/
-/logs/
-/.idea
-vendor
+.idea
+
