@@ -1,0 +1,40 @@
+{
+  "name": "eg/tencent-map",
+  "description": "腾讯位置服务(webservice-PHP版)",
+  "type": "library",
+  "version": "1.0.0",
+  "keywords": [
+    "腾讯位置服务"
+  ],
+  "homepage": "https://github.com/mtmuo/tencent-map",
+  "authors": [
+    {
+      "name": "花自飘零水自流",
+      "email": "21723614@qq.com",
+      "role": "Manager"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "topthink/framework": "^6.0.0"
+  },
+  "support": {
+    "email": "21723614@qq.com",
+    "issues": "https://github.com/mtmuo/tencent-map/issues",
+    "wiki": "https://github.com/mtmuo/tencent-map/wiki"
+  },
+  "license": "Apache-2.0",
+  "autoload": {
+    "psr-4": {
+      "eg\\tencent\\map\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "extra": {
+    "think": {
+      "config": {
+        "tmap": "src/config.php"
+      }
+    }
+  }
+}
