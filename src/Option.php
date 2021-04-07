@@ -15,7 +15,7 @@ class Option
 
     protected $secret;
 
-    public function __construct($key=null, $secret=null)
+    public function __construct($key = null, $secret = null)
     {
         $this->setKey($key);
         $this->setSecret($secret);
@@ -39,14 +39,14 @@ class Option
      * 返回格式：支持JSON/JSONP，默认JSON
      * @param string $value
      */
-    public function setOutput($value=self::OUTPUT_JSON)
+    public function setOutput($value = self::OUTPUT_JSON)
     {
         $this->option['output'] = $value;
     }
 
     /**
      * JSONP方式回调函数
-     * @param string $value
+     * @param $value
      */
     public function setCallback($value)
     {
@@ -81,18 +81,10 @@ class Option
         ksort($option);
 
         $pieces = [];
-        foreach ($option as $key => $val)
-        {
+        foreach ($option as $key => $val) {
             $pieces[] = "{$key}={$val}";
         }
-
         $str = sprintf('%s?%s', rtrim($uri, '/'), implode('&', $pieces));
-
-        /*
-         echo '<pre>';
-         print_r("{$str}{$this->secret}");
-         die;
-         //*/
 
         return md5("{$str}{$this->secret}");
     }

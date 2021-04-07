@@ -19,19 +19,12 @@ class Ip extends Bundle
     public function request($using_sig=false)
     {
         $uri = '/ws/location/v1/ip';
-
-
         if($using_sig) {
             $this->option->setSig($uri);
         }
-
         $data = $this->option->getAll();
-
-        //$this->request->logger->print($data, true);
-
         $this->request->uri($uri);
         $this->request->query($data);
-
         return $this->request->get();
     }
 }
